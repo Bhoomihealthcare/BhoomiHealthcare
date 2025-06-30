@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhoomi Health Care</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2fefe;
+      color: #222;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(90deg, #005f5f, #009999);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .logo {
+      max-width: 140px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+    header h1 {
+      font-size: 28px;
+      margin: 5px 0;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 2px #000;
+    }
+    header p {
+      margin-top: 8px;
+      font-size: 16px;
+    }
+
+    .layout-scroll {
+      background: #ffe6f0;
+      padding: 10px 8px;
+      overflow-x: auto;
+      white-space: nowrap;
+      border-top: 1px solid #f2c4d5;
+      border-bottom: 1px solid #f2c4d5;
+    }
+    .layout-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .layout-scroll .item {
+      display: inline-block;
+      width: 100px;
+      margin: 0 8px;
+      text-align: center;
+      vertical-align: top;
+    }
+    .layout-scroll .item img {
+      width: 55px;
+      height: 55px;
+      margin-bottom: 6px;
+    }
+    .layout-scroll .item p {
+      margin: 0;
+      font-size: 13px;
+      color: #333;
+      font-weight: 600;
+    }
+
+    .hero {
+      background: #e0ffff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .hero .btn {
+      background: #008080;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      font-weight: bold;
+    }
+    .hero .call-now {
+      animation: pulse 1.5s infinite;
+      background-color: #ff4444;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .services ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .services li {
+      background: #d0f0d0;
+      margin: 10px 0;
+      padding: 12px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 20px;
+    }
+    .card {
+      flex: 1 1 250px;
+      background: #ffffff;
+      border: 2px solid #cce7e8;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .review-box {
+      background: #fff;
+      border-left: 4px solid #008080;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 5px;
+    }
+
+    .gallery {
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 220px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 1px 1px 6px rgba(0,0,0,0.1);
+    }
+
+    .form-section form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .form-section input, .form-section select, .form-section textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      width: 100%;
+    }
+    .form-section button {
+      padding: 12px;
+      background-color: #008080;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .floating-call-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #ff4444;
+      color: white;
+      font-size: 26px;
+      padding: 15px 18px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 999;
+      transition: transform 0.3s ease;
+    }
+
+    footer {
+      width: 100vw;
+      background: #007070;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 40px;
+    }
+
+    .govt-section {
+      background: #e6ffe6;
+      padding: 25px 15px;
+      border-top: 2px solid #aaffaa;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: #006600;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+   <!-- Logo at the Top -->
+<div style="text-align: center; padding: 1px;">
+  <img src="A_vector_graphic_logo_features_Bhoomi_Healthcare_a.png" 
+       alt="Bhoomi Logo" 
+       style="height: 180px; max-width: 180%; object-fit: contain;" />
+</div>
+    </div>
+    <h1>BHOOMI HEALTH CARE</h1>
+    <p>24x7 Trusted Home Nursing & Health Support in Mumbai</p>
+  </header>
+
+    <!-- Services Icons Here -->
+<div class="layout-scroll">
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/3774/3774299.png" alt="Nursing" /><p>Nursing</p></div>
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png" alt="Wardboy" /><p>Wardboy</p></div>
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/3588/3588404.png" alt="Aya Female" /><p>Aya Female</p></div>
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/2920/2920021.png" alt="Baby Care" /><p>Baby Care</p></div>
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/992/992700.png" alt="24x7" /><p>24x7 Service</p></div>
+    <div class="item"><img src="https://cdn-icons-png.flaticon.com/128/1995/1995574.png" alt="Maid" /><p>Male/Female Maid</p></div>
+  </div>
+
+  <section class="hero">
+    <div style="text-align: center; margin-bottom: 35px;">
+      <span style="background-color: #b2dfdb; color: #004d40; padding: 14px 35px; border-radius: 25px; font-size: 22px; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.1); letter-spacing: 1px;">
+        Your Health. Our Priority.
+      </span>
+    </div>
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+      <a href="https://wa.me/918421457613" class="btn">📲 Book Now</a>
+      <a href="tel:+918421457613" class="btn call-now">📞 Call Now</a>
+    </div>
+  </section>
+
+  <section class="services">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <span style="background-color: #b2dfdb; color: #004d40; padding: 14px 30px; border-radius: 10px; font-size: 22px; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.1); letter-spacing: 1px;">Our Services</span>
+    </div>
+    <ul>
+      <li>Qualified Nurse’s & Wardboy</li>
+      <li>Aya (Female Attendants)</li>
+      <li>Baby Care & Postpartum Support</li>
+      <li>Male & Female Maid</li>
+      <li>24 Hours Caregiver on Call</li>
+    </ul>
+  </section>
+
+  <section class="cards">
+    <!-- Same as before -->
+  </section>
+
+  <section>
+    <h2>What Our Clients Say</h2>
+    <div class="review-box"><p>“Excellent nursing support. Timely and very polite staff.”</p><strong>- Priya Sharma</strong></div>
+    <div class="review-box"><p>“My mother was very happy with their service. Highly recommended.”</p><strong>- Rajesh Verma</strong></div>
+    <div class="review-box"><p>“I needed an Aya urgently — Bhoomi Health Care delivered in 2 hours!”</p><strong>- Sneha Patil</strong></div>
+    <div class="review-box"><p>“They provided trained staff for my father’s post-surgery care. Thank you!”</p><strong>- Nitesh Pawar</strong></div> <!-- ✅ New review -->
+  </section>
+
+ <!-- PHOTO GALLERY SECTION START -->
+<section class="gallery">
+  <!-- Styled Heading -->
+  <div style="text-align: center; margin-bottom: 30px;">
+    <span style="background-color: #b2dfdb; color: #004d40; padding: 14px 30px; border-radius: 10px; font-size: 22px; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.1); letter-spacing: 1px;">
+      Photo Gallery
+    </span>
+  </div>
+
+  <!-- Scrollable Images -->
+  <div style="
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+  ">
+    <img src="images/nursing-care-home.jpg" alt="Nursing Care at Home"  style="width: 200px; height: auto; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start; box-shadow: 1px 1px 6px rgba(0,0,0,0.1);" />
+    <img src="images/wardboy-service.jpg" alt="Wardboy Support" style="width: 200px; height: auto; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start; box-shadow: 1px 1px 6px rgba(0,0,0,0.1);" />
+    <img src="images/visiting-card.jpg" alt="Bhoomi Healthcare Visiting Card" style="width: 200px; height: auto; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start; box-shadow: 1px 1px 6px rgba(0,0,0,0.1);" />
+    <img src="images/gallery4.jpg" alt="Gallery 4" style="width: 200px; height: auto; border-radius: 8px; flex-shrink: 0; scroll-snap-align: start; box-shadow: 1px 1px 6px rgba(0,0,0,0.1);" />
+  </div>
+</section>
+<!-- PHOTO GALLERY SECTION END -->
+
+  <section class="contact">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <span style="background-color: #b2dfdb; color: #004d40; padding: 14px 30px; border-radius: 10px; font-size: 22px; font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.1); letter-spacing: 1px;">Contact Us</span>
+    </div>
+    <p><strong>📞 Phone:</strong> <a href="tel:+918421457613">+91 8421457613</a></p>
+    <p><strong>📧 Email:</strong> <a href="mailto:vaishalisatvi31@gmail.com">vaishalisatvi31@gmail.com</a></p>
+    <p><strong>📍 Address:</strong> <span style="color:#006060; font-weight: bold;">Shop No B/2, Chandramukhi Building, Kalyan (W), Maharashtra 421301</span></p>
+  </section>
+
+  <section class="form-section">
+    <h2>Send Your Request</h2>
+    <form onsubmit="sendWhatsApp(event)">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="tel" id="mobile" placeholder="Mobile Number" required />
+      <select id="service" required>
+        <option value="">Select Service</option>
+        <option>Nursing</option>
+        <option>Wardboy</option>
+        <option>Baby Care</option>
+        <option>Aya</option>
+        <option>Others</option>
+      </select>
+      <textarea id="message" rows="4" placeholder="Message / Address / Special Note"></textarea>
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <section class="govt-section">
+    हमारी कंपनी पूरी तरह से सरकार द्वारा मान्यता प्राप्त है।<br/>
+    <strong>Government Registration No:</strong> <span style="color: #004d00;">UDYAM-MH-33-0125520</span>
+  </section>
+
+  <footer>
+    <p>&copy; 2018–2025 <strong>Bhoomi Health Care</strong>. All rights reserved.</p>
+  </footer>
+
+  <a href="tel:+918421457613" class="floating-call-btn" title="Call Now">📞</a>
+
+  <script>
+    function sendWhatsApp(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const mobile = document.getElementById('mobile').value;
+      const service = document.getElementById('service').value;
+      const msg = document.getElementById('message').value;
+      const text = `Name: ${name}%0AMobile: ${mobile}%0AService: ${service}%0AMessage: ${msg}`;
+      const url = `https://wa.me/918421457613?text=${text}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
